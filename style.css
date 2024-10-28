@@ -89,13 +89,15 @@ header div a:hover {
 /* Main Layout and Card Styling */
 main {
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between; /* Adjusted to remove gaps */
    padding: 40px 20px;
+   gap: 20px; /* Adds space between cards */
 }
 
 .card {
-   width: calc(33% - 10px);
-   margin: 10px 5px;
+   flex: 1; /* Makes each card grow equally */
+   max-width: calc(33.33% - 20px); /* Sets max width to avoid overflow */
+   margin: 0; /* Removed margin since gap will be used */
    background-color: white;
    border-radius: 10px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
